@@ -18,7 +18,7 @@ Likely they meant to say
 
 * It's a fair coin (50% heads, 50% tails)
 * If your balance reaches $0, you lose, end of game
-* replace "you win $100" with "your total reaches $100"
+* replace "you win $100" with "your balance reaches $100"
 
 With these assumptions, it's a straightforward formulation of the Gambler's Ruin problem
 
@@ -55,7 +55,7 @@ $P_{30} = \frac{30}{100} = 0.3$
 
 They never did say "fair coin". As $p$ ranges from 0 to 1, what happens to our odds?
 
-Turns out, if the coin is far from fair, the outcome is quite certain. Closer in on 50/50, though, we see some variation.
+Turns out, if the coin is only a little away from fair, the outcome is quite certain. Closer in on 50/50, though, we see some variation.
 
 ```{r echo=F}
 i = 30
