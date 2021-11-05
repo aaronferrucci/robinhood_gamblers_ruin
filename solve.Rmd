@@ -75,7 +75,7 @@ print(p1)
 There's a coin that matches each of the given answers. Instead of doing math, we can read it off of the graph:
 ```{r echo=F}
 x_low = .497
-x_high = .5025
+x_high = .50375
 p <- ggplot(data = data.frame(p = 0), mapping = aes(x = p)) +
   scale_x_continuous(breaks = seq(x_low, x_high, 0.00025), limits = c(x_low, x_high)) +
   scale_y_continuous(breaks = seq(0, 1, 0.05)) +
@@ -83,7 +83,7 @@ p <- ggplot(data = data.frame(p = 0), mapping = aes(x = p)) +
   geom_hline(yintercept=0.2, linetype="dashed", color = "red") +
   geom_hline(yintercept=0.25, linetype="dashed", color = "red") +
   geom_hline(yintercept=0.3, linetype="dashed", color = "red") +
-  geom_hline(yintercept=0.4, linetype="dashed", color = "red") +
+  geom_hline(yintercept=0.45, linetype="dashed", color = "red") +
   ylab(TeX("$P_{30}^{100}(p)$")) 
 
 p2 <- p + stat_function(fun=f)
@@ -93,10 +93,10 @@ print(p2)
 ## Gambler's Ruin: p Really Matters
 Reading off of the graph, I get (approximately):
 
-$P_{30}(0.497375) = 0.2$
+$P_{30}(0.497375) \approx 0.2$
 
-$P_{30}(0.49875) = 0.25$
+$P_{30}(0.49875) = \approx.25$
 
 $P_{30}(0.5) = 0.3$
 
-$P_{30}(0.50225) = 0.4$
+$P_{30}(.503375) \approx 0.45$
