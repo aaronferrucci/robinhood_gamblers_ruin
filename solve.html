@@ -171,7 +171,7 @@ pre code {
 <div id="problem-statement" class="section level2">
 <h2>Problem Statement</h2>
 <blockquote>
-<p>You start with $30. Flip a coin - win $1 for heads, lose $1 for tails. What’s the probability that you win $100? Possible answers are 20%, 25%, 30%, 40%</p>
+<p>You start with $30. Flip a coin - win $1 for heads, lose $1 for tails. What’s the probability that you win $100? Possible answers are 20%, 25%, 30%, 45%</p>
 </blockquote>
 </div>
 <div id="interpreting-the-problem" class="section level2">
@@ -187,15 +187,15 @@ pre code {
 <p>From this we have a formula:</p>
 <p><span class="math inline">\(P_{i}^{N}(p) = \frac{1 - (\frac{q}{p})^i}{1 - (\frac{q}{p})^N}\)</span></p>
 <p>Where <span class="math inline">\(i\)</span> is the starting balance, <span class="math inline">\(p\)</span> is the probability of heads, <span class="math inline">\(q = 1 - p\)</span>, <span class="math inline">\(N\)</span> is the target balance.</p>
-<p>If <span class="math inline">\(p = q\)</span> (fair coin), there’s a simpler formula:</p>
-<p><span class="math inline">\(P_{i}^{N} = \frac{i}{N}\)</span></p>
 <p>For this problem,</p>
 <p><span class="math inline">\(p\)</span> is 0.5, the probability of heads</p>
 <p><span class="math inline">\(i = 30\)</span> (starting balance)</p>
 <p><span class="math inline">\(N = 100\)</span> (target balance)</p>
 <p><span class="math inline">\(q = 1 - p\)</span></p>
+<p>If <span class="math inline">\(p = q\)</span> (fair coin), there’s a simpler formula:</p>
+<p><span class="math inline">\(P_{i}^{N} = \frac{i}{N}\)</span></p>
 <p>Substituting,</p>
-<p><span class="math inline">\(P_{30} = \frac{30}{100} = 0.3\)</span></p>
+<p><span class="math inline">\(P_{30}^{100} = \frac{30}{100} = 0.3\)</span></p>
 <p>30%!</p>
 </div>
 <div id="yes-but" class="section level2">
@@ -207,11 +207,11 @@ pre code {
 </div>
 <div id="gamblers-ruin-p-really-matters" class="section level2">
 <h2>Gambler’s Ruin: p Really Matters</h2>
-<p>Reading off of the graph, I get (approximately):</p>
-<p><span class="math inline">\(P_{30}(0.497375) \approx 0.2\)</span></p>
-<p><span class="math inline">\(P_{30}(0.49875) = \approx.25\)</span></p>
-<p><span class="math inline">\(P_{30}(0.5) = 0.3\)</span></p>
-<p><span class="math inline">\(P_{30}(.503375) \approx 0.45\)</span></p>
+<p>Approximate solutions:</p>
+<p><span class="math inline">\(P_{30}^{100}(0.497375) \approx 0.2\)</span></p>
+<p><span class="math inline">\(P_{30}^{100}(0.49875) = \approx.25\)</span></p>
+<p><span class="math inline">\(P_{30}^{100}(0.5) = 0.3\)</span></p>
+<p><span class="math inline">\(P_{30}^{100}(.503375) \approx 0.45\)</span></p>
 </div>
 
 

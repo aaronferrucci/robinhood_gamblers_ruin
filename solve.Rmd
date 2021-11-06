@@ -11,7 +11,7 @@ library(latex2exp)
 
 ## Problem Statement
 > You start with $30. Flip a coin - win $1 for heads, lose $1 for tails. What's the probability that you win $100?
-> Possible answers are 20%, 25%, 30%, 40%
+> Possible answers are 20%, 25%, 30%, 45%
 
 ## Interpreting the Problem
 Likely they meant to say
@@ -31,10 +31,6 @@ $P_{i}^{N}(p) = \frac{1 - (\frac{q}{p})^i}{1 - (\frac{q}{p})^N}$
 
 Where $i$ is the starting balance, $p$ is the probability of heads, $q = 1 - p$, $N$ is the target balance.
 
-If $p = q$ (fair coin), there's a simpler formula:
-
-$P_{i}^{N} = \frac{i}{N}$
-
 For this problem,
 
 $p$ is 0.5, the probability of heads
@@ -45,9 +41,13 @@ $N = 100$ (target balance)
 
 $q = 1 - p$
 
+If $p = q$ (fair coin), there's a simpler formula:
+
+$P_{i}^{N} = \frac{i}{N}$
+
 Substituting,
 
-$P_{30} = \frac{30}{100} = 0.3$
+$P_{30}^{100} = \frac{30}{100} = 0.3$
 
 30%!
 
@@ -91,12 +91,12 @@ print(p2)
 ```
 
 ## Gambler's Ruin: p Really Matters
-Reading off of the graph, I get (approximately):
+Approximate solutions:
 
-$P_{30}(0.497375) \approx 0.2$
+$P_{30}^{100}(0.497375) \approx 0.2$
 
-$P_{30}(0.49875) = \approx.25$
+$P_{30}^{100}(0.49875) = \approx.25$
 
-$P_{30}(0.5) = 0.3$
+$P_{30}^{100}(0.5) = 0.3$
 
-$P_{30}(.503375) \approx 0.45$
+$P_{30}^{100}(.503375) \approx 0.45$
